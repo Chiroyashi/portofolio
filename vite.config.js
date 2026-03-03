@@ -3,15 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(), 
-  ],
-  // Ganti './' menjadi '/portofolio/' (nama repo GitHub kamu)
-  base: '/portofolio/', 
+  plugins: [react(), tailwindcss()],
+  base: '/portofolio/', // WAJIB: Nama repo di GitHub
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-  },
+  }
 })
