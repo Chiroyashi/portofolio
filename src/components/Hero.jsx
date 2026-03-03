@@ -63,7 +63,7 @@ const Hero = () => {
         <div className="relative w-72 h-72 md:w-[400px] md:h-[400px] rounded-full p-[2px] bg-gradient-to-b from-royal-purple to-transparent shadow-2xl">
           <div className="w-full h-full rounded-full overflow-hidden bg-space-black relative">
             <img 
-              src="/assets/profile.png" 
+              src="assets/profile.png" 
               alt="Profile"
               /* Perbaikan: Grayscale dihapus agar selalu berwarna */
               className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
