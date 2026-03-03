@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-black: #030005; 
+  --color-royal-purple: #7000FF;
+  --color-deep-purple: #31006E;
+  --color-neon-magenta: #B633FF;
+  --color-electric-blue: #00D2FF; 
+  --color-slate-blue: #A5A5C7;
+
+  /* Animasi Baru untuk Background */
+  --animate-slow-pan: slow-pan 30s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-glow 8s ease-in-out infinite;
+
+  @keyframes slow-pan {
+    from { transform: scale(1.1) translateX(-2%); }
+    to { transform: scale(1.1) translateX(2%); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-space-black text-white selection:bg-neon-magenta/40;
+    /* Kita hapus gradasi radial statis di sini karena akan diganti background bergerak */
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { @apply bg-space-black; }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-deep-purple/50 rounded-full border-2 border-space-black hover:bg-royal-purple/80 transition-all;
+  }
+}
+
+@utility glass-card-purple {
+  background: linear-gradient(135deg, rgba(112, 0, 255, 0.05), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(182, 51, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+@utility neon-text-purple {
+  text-shadow: 0 0 10px rgba(112, 0, 255, 0.5), 0 0 20px rgba(182, 51, 255, 0.3);
+}
