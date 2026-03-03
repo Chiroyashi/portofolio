@@ -23,11 +23,11 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        # Menggunakan --force untuk menghindari konflik peer dependencies
+        # Menggunakan --force karena ada dependensi beta
         run: npm install --force
 
       - name: Build
-        # Menambahkan CI=false agar build tidak gagal hanya karena ada warning
+        # CI=false sangat penting agar build tidak stop saat ada warning dari Vite Beta
         run: CI=false npm run build
 
       - name: Upload artifact
