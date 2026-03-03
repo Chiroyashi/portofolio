@@ -10,7 +10,7 @@ function App() {
       {/* 1. BACKGROUND LAYER - Mengambil langsung dari folder public */}
       <div className="fixed inset-0 -z-50 pointer-events-none overflow-hidden bg-[#030005]">
         <img 
-          src="/assets/sasuke.png" 
+          src="assets/sasuke.png" 
           className="w-full h-full object-cover opacity-40 animate-slow-pan grayscale-[30%] brightness-[0.5] scale-110"
           alt="sasuke-background"
           onError={(e) => console.error("Cek lagi! File tidak terbaca di /public/assets/sasuke.png")}
