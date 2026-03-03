@@ -1,13 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite' // Import plugin v4
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(), // Tambahkan ini di sini
-  ],
-  base: '/portofolio/', // Pastikan ini nama repo kamu
+  plugins: [react(), tailwindcss()],
+  base: '/portofolio/', // Pastikan 'portofolio' adalah nama repository-mu
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
